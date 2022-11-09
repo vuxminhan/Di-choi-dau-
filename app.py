@@ -239,7 +239,7 @@ if endpoint == 'Event':
             "Y/M/D": [],
             "Start_hour": []
         }
-        for i in range(0, 61):
+        for i in range(0, 67):
             if str(day_picked) == str(df_event["Y/M/D"][i]):
                 event_picked["Name"].append(df_event["Name"][i])
                 event_picked["Location"].append(df_event["Location"][i])
