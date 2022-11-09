@@ -186,7 +186,7 @@ if endpoint == 'Film':
             "View grade": []
         }
         reday = st.date_input("After which day that you are able to watch movie?", datetime.date(2022, 11, 9))
-        max = 15
+        max = len(df_film)
         count = -1
         try:
             for i in range(0, max):
@@ -239,7 +239,7 @@ if endpoint == 'Event':
             "Y/M/D": [],
             "Start_hour": []
         }
-        for i in range(0, 67):
+        for i in range(0, len(df_event)):
             if str(day_picked) == str(df_event["Y/M/D"][i]):
                 event_picked["Name"].append(df_event["Name"][i])
                 event_picked["Location"].append(df_event["Location"][i])
